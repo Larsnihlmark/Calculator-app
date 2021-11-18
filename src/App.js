@@ -1,14 +1,24 @@
 import Button from './components/button';
+import Input from './components/input';
 import React, { Component } from "react";
 import './App.css';
 import { render } from '@testing-library/react';
 
 class App extends Component{
+
+  constructor(props){
+
+    super(props);
+    this.state = {
+      input: ""
+    }
+
+  }
   render() {
     return (
       <div className="App">
         <div className="calc-wrapper">
-          
+            <Input input={this.state.input}></Input>
           <div className="row">
             <Button>7</Button>
             <Button>8</Button>
